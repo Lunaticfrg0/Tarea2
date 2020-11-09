@@ -22,7 +22,7 @@ function shuffle(array) {
     let tmp = [];
     let used = [];
     let amountPerGroup = parseInt(students.length/amountOfGroups);
-    let Amount = parseInt(students.length/amountOfGroups);
+    let Amount = parseInt(students.length%amountOfGroups);
 
     while(students.length > 0){
         if(students.length <= Amount){
@@ -111,8 +111,8 @@ function shuffle(array) {
         for(j = 0 ; j< students[i].length; j++){
             console.log(`   Integrante #${j+1} `+ students[i][j])
         }
-        for(k = 0 ; k< students[i].length; k++){
-            console.log(`       Tema #${k+1} `+ topics[i][k])
+        for(k = 0 ; k < topics[i].length; k++){
+            console.log(`       Tema #${k+1}: `+ topics[i][k])
         }
         console.log("-----------------------------------------------")
 
